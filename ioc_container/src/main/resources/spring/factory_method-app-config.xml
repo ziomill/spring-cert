@@ -4,9 +4,9 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
                            http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 
-    <bean id="theSingleton" class="it.millsoft.springcert.ioc.Singleton" factory-method="getINSTANCE"/>
+    <bean id="theSingleton" class="it.millsoft.springcert.commons.Singleton" factory-method="getINSTANCE"/>
 
-    <bean id="myBean" class="it.millsoft.springcert.ioc.MyBean">
+    <bean id="myBean" class="it.millsoft.springcert.ioc.factory_method.MyBean">
         <constructor-arg ref="theSingleton" />
     </bean>
 

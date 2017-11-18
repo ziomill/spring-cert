@@ -1,4 +1,4 @@
-package it.millsoft.springcert.ioc;
+package it.millsoft.springcert.commons;
 
 import java.util.UUID;
 

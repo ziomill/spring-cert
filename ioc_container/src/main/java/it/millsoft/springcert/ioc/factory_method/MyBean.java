@@ -1,4 +1,6 @@
-package it.millsoft.springcert.ioc;
+package it.millsoft.springcert.ioc.factory_method;
+
+import it.millsoft.springcert.commons.Singleton;
 
 public class MyBean
 {

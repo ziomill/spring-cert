@@ -1,0 +1,17 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="injectedBean" class="it.millsoft.springcert.commons.InjectedBean"/>
+
+    <bean id="firstServiceBean" class="it.millsoft.springcert.ioc.initialization.FirstServiceBean">
+        <constructor-arg ref="injectedBean" />
+        <constructor-arg value="Pippo" />
+    </bean>
+
+    <bean id="secondServiceBean" class="it.millsoft.springcert.ioc.initialization.SecondServiceBean">
+        <property name="injectedBean" ref="injectedBean"/>
+        <property name="scalar" value="Pippo" />
+    </bean>
+
+</beans>
